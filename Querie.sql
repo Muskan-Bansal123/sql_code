@@ -38,6 +38,8 @@ INSERT INTO salary_info (EMPLOYEE_CATEGORY, BASIC, HOUSE_RENT_ALLOWANCE) VALUES
 ('D', 25000.00, 5000.00),
 ('E', 20000.00, 4000.00);
 
-
+use employee;
 
 select E.EMPID,E.EMPNAME,D.DEPTNAME,S.HOUSE_RENT_ALLOWANCE FROM dept_info as D JOIN employee_info as E on D.DEPTID=E.DEPTID JOIN salary_info as S on E.EMPLOYEE_CATEGORY=S.EMPLOYEE_CATEGORY where D.LOCATION IN('Banglore','Pune');
+
+select * from salary_info
